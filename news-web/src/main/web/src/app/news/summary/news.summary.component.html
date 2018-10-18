@@ -1,0 +1,64 @@
+<div class="box">
+    <div class="image" [style.background-image]="articlePicture">
+    </div>
+    <div class="content">
+        {{article?.title}}
+    </div>
+    <div class="button-area">
+        <button class="btn btn-primary btn-read-more"
+            (click)="openModal(content)">Open details</button>
+    </div>
+</div>
+<ng-template #content let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title mod-title" id="modal-basic-title">{{article?.title}}</h4>
+        <button type="button" class="close" (click)="modal.dismiss()">
+            <span>&times;</span>
+        </button>
+        <br>
+    </div>
+    <div class="modal-body autoModal">
+        <img [src]="article?.imageUrl" class="img-fluid mod-image mx-auto
+            d-block" alt="Responsive image">
+            <div class="row">
+                    <div class="col-2">
+                        <label class="label-mod">Author: </label>
+                    </div>
+                    <div class="col">
+                        {{article.author ? article.author : 'empty'}}
+                    </div>
+            </div>
+            <div class="row">
+                    <div class="col-2">
+                        <label class="label-mod">Description: </label>
+                    </div>
+                    <div class="col">
+                        {{article.description ? article.description : 'empty'}}
+                    </div>
+            </div>
+            <div class="row">
+                    <div class="col-2">
+                        <label class="label-mod">Date: </label>
+                    </div>
+                    <div class="col">
+                        {{article.date ? article.date : 'empty'}}
+                    </div>
+            </div>
+            <div class="row">
+                    <div class="col-2">
+                        <label class="label-mod">Source: </label>
+                    </div>
+                    <div class="col">
+                        {{article.sourceName ? article.sourceName : 'empty'}}
+                    </div>
+            </div>
+            <div class="row">
+                    <div class="col-2">
+                        <label class="label-mod">Link: </label>
+                    </div>
+                    <div class="col">
+                        <a target="_blank" rel="noopener noreferrer" [href]="article.articleUrl" *ngIf="article.articleUrl ? true : false">{{article.articleUrl}}</a>
+                    </div>
+            </div>
+    </div>
+</ng-template>

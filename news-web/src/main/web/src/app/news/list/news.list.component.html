@@ -1,0 +1,10 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 col-sm-6" *ngFor="let article of news?.articles">
+        <app-news-summary [article]= "article"></app-news-summary>
+    </div>
+    <div *ngIf="!news?.articles || news?.articles.length == 0">
+        No articles matching criteria.
+    </div>
+  </div>
+</div>

@@ -1,0 +1,68 @@
+.box {
+  background-color: #a0c1e5;
+  display: block;
+  margin-top: 10px;
+  height: 300px;
+  overflow: hidden;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: 150px;
+  padding: 20px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+
+[hidden] {
+  display: none !important;
+}
+
+.content {
+  padding: 20px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.btn-read-more {
+  display: block;
+  position: absolute;
+  top: 250px;
+}
+
+.button-area {
+  display: flex;
+  justify-content: center;
+}
+
+.mod-title {
+  font-size: 17px;
+  text-align: left;
+}
+
+.mod-link {
+  width: 50%;
+}
+
+.mod-image {
+    height: auto; 
+    width: auto; 
+    max-width: 200px; 
+    max-height: 200px;
+    padding-bottom: 10px;
+}
+
+.autoModal.modal .modal-body{
+  max-height: 100%;
+}
+
+.mod-text {
+  font-weight:normal;
+}
+
+.label-mod {
+  font-weight: bolder;
+}

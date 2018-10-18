@@ -12,6 +12,7 @@
 	  <relativePath />
   </parent>
   <modules>
+      <module>news-web</module>
       <module>news-server</module>
   </modules>
 </project>
