@@ -1,0 +1,5 @@
+news-feed:
+    image: news-server:latest
+    container_name: news-server
+    ports:
+        - "8080:8080"
