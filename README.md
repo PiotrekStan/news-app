@@ -28,7 +28,7 @@ set value for:
 After setting the api.key you have to build project and Docker image. 
 
 ```sh
-$ cd ./news=app
+$ cd ./news-app
 $ mvn clean install
 ```
 
