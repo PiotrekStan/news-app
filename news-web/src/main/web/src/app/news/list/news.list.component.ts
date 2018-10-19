@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { NewsService } from '../../service/news.service';
 import { NewsDto } from '../../model/news.model';
 import { ActivatedRoute, ParamMap} from '@angular/router';
-import { switchMap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-news-list',
@@ -23,8 +22,7 @@ export class NewsListComponent implements OnInit {
   getNews(category: string) {
     this.service.getByCountryAndCategory('pl', category)
       .subscribe(
-        (data) => { this.news = data;
-                    console.log(this.news); },
+        (data) => { this.news = data; },
         (error) => { throw error; }
         );
   }

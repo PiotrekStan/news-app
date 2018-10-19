@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { NewsService } from '../../service/news.service';
 import { ArticleDto } from '../../model/article.model';
 import { DomSanitizer } from '@angular/platform-browser';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
